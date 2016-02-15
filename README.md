@@ -13,7 +13,7 @@ The wiki include the documentation of the dashboard. The table of contents is th
 1. Installation
 
     2. [Optimizers](https://github.com/centeropenmiddleware/solowan-dashboard/wiki/Installation%20Optimizers)
-    2. [Sever](https://github.com/centeropenmiddleware/solowan-dashboard/wiki/Installation%20Sever)
+    2. [Server](https://github.com/centeropenmiddleware/solowan-dashboard/wiki/Installation%20Server)
 
 1. [Views](https://github.com/centeropenmiddleware/solowan-dashboard/wiki/Views)
 
