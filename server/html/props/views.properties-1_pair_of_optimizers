@@ -367,9 +367,9 @@ statistic_online.s4.ticks_separation = 40000
 statistic_online.s4.flex_height = true
 statistic_online.s4.mark = 100000000000
 
-statistic_online.s4.charts.a0.title = Optimizer 11 - CPU
+statistic_online.s4.charts.a0.title = Optimizer 1 - CPU
 statistic_online.s4.charts.a0.label = % CPU Usage
-statistic_online.s4.charts.a0.url = ws://sta:5100/o11_vmstat
+statistic_online.s4.charts.a0.url = ws://sta:5100/o1_vmstat
 statistic_online.s4.charts.a0.values.v0.id = cpu.1
 statistic_online.s4.charts.a0.values.v0.color = green
 statistic_online.s4.charts.a0.values.v1.id = cpu.2
@@ -391,9 +391,9 @@ statistic_online.s4.charts.a0.legend.l3.id = cpu.4
 statistic_online.s4.charts.a0.legend.l3.text = CPU Core 4 (%)
 statistic_online.s4.charts.a0.legend.l3.color = red
 
-statistic_online.s4.charts.a1.title = Optimizer 21 - CPU
+statistic_online.s4.charts.a1.title = Optimizer 2 - CPU
 statistic_online.s4.charts.a1.label = % CPU Usage
-statistic_online.s4.charts.a1.url = ws://sta:5101/o21_vmstat
+statistic_online.s4.charts.a1.url = ws://sta:5101/o2_vmstat
 statistic_online.s4.charts.a1.values.v0.id = cpu.1
 statistic_online.s4.charts.a1.values.v0.color = green
 statistic_online.s4.charts.a1.values.v1.id = cpu.2
@@ -415,8 +415,8 @@ statistic_online.s4.charts.a1.legend.l3.id = cpu.4
 statistic_online.s4.charts.a1.legend.l3.text = CPU Core 4 (%)
 statistic_online.s4.charts.a1.legend.l3.color = red
 
-statistic_online.s4.charts.a2.title = Optimizer 11 - Memory
-statistic_online.s4.charts.a2.url = ws://sta:5100/o11_vmstat
+statistic_online.s4.charts.a2.title = Optimizer 1 - Memory
+statistic_online.s4.charts.a2.url = ws://sta:5100/o1_vmstat
 statistic_online.s4.charts.a2.legend.l0.id = memory.total
 statistic_online.s4.charts.a2.legend.l0.text = Total memory (KiB)
 statistic_online.s4.charts.a2.legend.l0.color = blue
@@ -427,8 +427,8 @@ statistic_online.s4.charts.a2.legend.l2.id = memory.free
 statistic_online.s4.charts.a2.legend.l2.text = Free memory (KiB)
 statistic_online.s4.charts.a2.legend.l2.color = green
 
-statistic_online.s4.charts.a3.title = Optimizer 21 - Memory
-statistic_online.s4.charts.a3.url = ws://sta:5101/o21_vmstat
+statistic_online.s4.charts.a3.title = Optimizer 2 - Memory
+statistic_online.s4.charts.a3.url = ws://sta:5101/o2_vmstat
 statistic_online.s4.charts.a3.legend.l0.id = memory.total
 statistic_online.s4.charts.a3.legend.l0.text = Total memory (KiB)
 statistic_online.s4.charts.a3.legend.l0.color = blue
@@ -438,31 +438,6 @@ statistic_online.s4.charts.a3.legend.l1.color = red
 statistic_online.s4.charts.a3.legend.l2.id = memory.free
 statistic_online.s4.charts.a3.legend.l2.text = Free memory (KiB)
 statistic_online.s4.charts.a3.legend.l2.color = green
-
-statistic_online.s4.charts.b0.title = Optimizer 12 - CPU
-statistic_online.s4.charts.b0.label = % CPU Usage
-statistic_online.s4.charts.b0.url = ws://sta:5200/o12_vmstat
-statistic_online.s4.charts.b0.values.v0.id = cpu.1
-statistic_online.s4.charts.b0.values.v0.color = green
-statistic_online.s4.charts.b0.values.v1.id = cpu.2
-statistic_online.s4.charts.b0.values.v1.color = orange
-statistic_online.s4.charts.b0.values.v2.id = cpu.3
-statistic_online.s4.charts.b0.values.v2.color = blue
-statistic_online.s4.charts.b0.values.v3.id = cpu.4
-statistic_online.s4.charts.b0.values.v3.color = red
-statistic_online.s4.charts.b0.legend.l0.id = cpu.1
-statistic_online.s4.charts.b0.legend.l0.text = CPU Core 1 (%)
-statistic_online.s4.charts.b0.legend.l0.color = green
-statistic_online.s4.charts.b0.legend.l1.id = cpu.2
-statistic_online.s4.charts.b0.legend.l1.text = CPU Core 2 (%)
-statistic_online.s4.charts.b0.legend.l1.color = orange
-statistic_online.s4.charts.b0.legend.l2.id = cpu.3
-statistic_online.s4.charts.b0.legend.l2.text = CPU Core 3 (%)
-statistic_online.s4.charts.b0.legend.l2.color = blue
-statistic_online.s4.charts.b0.legend.l3.id = cpu.4
-statistic_online.s4.charts.b0.legend.l3.text = CPU Core 4 (%)
-statistic_online.s4.charts.b0.legend.l3.color = red
-
 
 
 # MANAGEMENT
