@@ -5,31 +5,31 @@
       "path": "/LtW",
       "commands": {
         "total_input_bytes.value": {
-          "command": "opennop show workers | sed -n '17p' | tr -d '|' | tr -s ' ' | awk '{print$2}'"
+          "command": "opennop show workers | grep total | sed -n '2p' | tr -d '|' | tr -s ' ' | awk '{print$2}'"
         },
         "total_output_bytes.value": {
-          "command": "opennop show workers | sed -n '17p' | tr -d '|' | tr -s ' ' | awk '{print$3}'"
+          "command": "opennop show workers | grep total | sed -n '2p' | tr -d '|' | tr -s ' ' | awk '{print$3}'"
         },
         "comp_bytes.value": {
-          "command": "opennop show workers | sed -n '17p' | tr -d '|' | tr -s ' ' | awk '{print$4}'"
+          "command": "opennop show workers | grep total | sed -n '2p' | tr -d '|' | tr -s ' ' | awk '{print$4}'"
         },
         "dedup_bytes.value": {
-          "command": "opennop show workers | sed -n '17p' | tr -d '|' | tr -s ' ' | awk '{print$5}'"
+          "command": "opennop show workers | grep total | sed -n '2p' | tr -d '|' | tr -s ' ' | awk '{print$5}'"
         },
         "head_bytes.value": {
-          "command": "opennop show workers | sed -n '17p' | tr -d '|' | tr -s ' ' | awk '{print$6}'"
+          "command": "opennop show workers | grep total | sed -n '2p' | tr -d '|' | tr -s ' ' | awk '{print$6}'"
         },        
         "total_packets.value": {
-          "command": "opennop show workers | sed -n '17p' | tr -d '|' | tr -s ' ' | awk '{print$7}'"
+          "command": "opennop show workers | grep total | sed -n '2p' | tr -d '|' | tr -s ' ' | awk '{print$7}'"
         },
         "comp_packets.value": {
-          "command": "opennop show workers | sed -n '17p' | tr -d '|' | tr -s ' ' | awk '{print$8}'"
+          "command": "opennop show workers | grep total | sed -n '2p' | tr -d '|' | tr -s ' ' | awk '{print$8}'"
         },
         "dedup_packets.value": {
-          "command": "opennop show workers | sed -n '17p' | tr -d '|' | tr -s ' ' | awk '{print$9}'"
+          "command": "opennop show workers | grep total | sed -n '2p' | tr -d '|' | tr -s ' ' | awk '{print$9}'"
         },
         "comp&dedup_packets.value": {
-          "command": "opennop show workers | sed -n '17p' | tr -d '|' | tr -s ' ' | awk '{print$10}'"
+          "command": "opennop show workers | grep total | sed -n '2p' | tr -d '|' | tr -s ' ' | awk '{print$10}'"
         }
       }
     },
@@ -37,31 +37,31 @@
       "path": "/WtL",
       "commands": {
         "total_input_bytes.value": {
-          "command": "opennop show workers | sed -n '26p' | tr -d '|' | tr -s ' ' | awk '{print$2}'"
+          "command": "opennop show workers | grep total | sed -n '3p' | tr -d '|' | tr -s ' ' | awk '{print$2}'"
         },
         "total_output_bytes.value": {
-          "command": "opennop show workers | sed -n '26p' | tr -d '|' | tr -s ' ' | awk '{print$3}'"
+          "command": "opennop show workers | grep total | sed -n '3p' | tr -d '|' | tr -s ' ' | awk '{print$3}'"
         },
         "comp_bytes.value": {
-          "command": "opennop show workers | sed -n '26p' | tr -d '|' | tr -s ' ' | awk '{print$4}'"
+          "command": "opennop show workers | grep total | sed -n '3p' | tr -d '|' | tr -s ' ' | awk '{print$4}'"
         },
         "dedup_bytes.value": {
-          "command": "opennop show workers | sed -n '26p' | tr -d '|' | tr -s ' ' | awk '{print$5}'"
+          "command": "opennop show workers | grep total | sed -n '3p' | tr -d '|' | tr -s ' ' | awk '{print$5}'"
         },
         "head_bytes.value": {
-          "command": "opennop show workers | sed -n '26p' | tr -d '|' | tr -s ' ' | awk '{print$6}'"
+          "command": "opennop show workers | grep total | sed -n '3p' | tr -d '|' | tr -s ' ' | awk '{print$6}'"
         },    
         "total_packets.value": {
-          "command": "opennop show workers | sed -n '26p' | tr -d '|' | tr -s ' ' | awk '{print$7}'"
+          "command": "opennop show workers | grep total | sed -n '3p' | tr -d '|' | tr -s ' ' | awk '{print$7}'"
         },
         "comp_packets.value": {
-          "command": "opennop show workers | sed -n '26p' | tr -d '|' | tr -s ' ' | awk '{print$8}'"
+          "command": "opennop show workers | grep total | sed -n '3p' | tr -d '|' | tr -s ' ' | awk '{print$8}'"
         },
         "dedup_packets.value": {
-          "command": "opennop show workers | sed -n '26p' | tr -d '|' | tr -s ' ' | awk '{print$9}'"
+          "command": "opennop show workers | grep total | sed -n '3p' | tr -d '|' | tr -s ' ' | awk '{print$9}'"
         },
         "comp&dedup_packets.value": {
-          "command": "opennop show workers | sed -n '26p' | tr -d '|' | tr -s ' ' | awk '{print$10}'"
+          "command": "opennop show workers | grep total | sed -n '3p' | tr -d '|' | tr -s ' ' | awk '{print$10}'"
         }
       }
     },
@@ -78,16 +78,16 @@
           "command": "free | sed -n '2p' | awk '{print$4}'"
         },
         "cpu.1": {
-          "command": "expr 100 - $(mpstat -P ALL 1 1 | sed -n '5p' | awk '{print$12}' | cut -f 1 -d',')"
+          "command": "expr 100 - $(LANG=C mpstat -P ALL 1 1 | sed -n '5p' | awk '{print$NF}' | cut -f 1 -d'.')"
         },
         "cpu.2": {
-          "command": "expr 100 - $(mpstat -P ALL 1 1 | sed -n '6p' | awk '{print$12}' | cut -f 1 -d',')"
+          "command": "expr 100 - $(LANG=C mpstat -P ALL 1 1 | sed -n '6p' | awk '{print$NF}' | cut -f 1 -d'.')"
         },
         "cpu.3": {
-          "command": "expr 100 - $(mpstat -P ALL 1 1 | sed -n '7p' | awk '{print$12}' | cut -f 1 -d',')"
+          "command": "expr 100 - $(LANG=C mpstat -P ALL 1 1 | sed -n '7p' | awk '{print$NF}' | cut -f 1 -d'.')"
         },
         "cpu.4": {
-          "command": "expr 100 - $(mpstat -P ALL 1 1 | sed -n '8p' | awk '{print$12}' | cut -f 1 -d',')"
+          "command": "expr 100 - $(LANG=C mpstat -P ALL 1 1 | sed -n '8p' | awk '{print$NF}' | cut -f 1 -d'.')"
         }
       }
     }
